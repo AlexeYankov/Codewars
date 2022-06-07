@@ -45,12 +45,12 @@
 // }
 //
 // Solution
-function getAge(inputString){
-// return the girl's correct age as an integer. Happy coding :)
-    const inputValue = +inputString.slice(0,1)
-    return inputValue
-}
-//
+// function getAge(inputString){
+// // return the girl's correct age as an integer. Happy coding :)
+//     const inputValue = +inputString.slice(0,1)
+//     return inputValue
+// }
+// //
 // // 27.05.22
 // // 4. Training JS #1: create your first JS function and print "Hello World!"
 // // Instructions
@@ -64,39 +64,75 @@ function getAge(inputString){
 //     let str = "Hello World!"
 //     console.log(str)
 // }
+// //
+// 5. I love you, a little , a lot, passionately ... not at all
+// Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
 //
-5. I love you, a little , a lot, passionately ... not at all
-Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
+//     I love you
+// a little
+// a lot
+// passionately
+// madly
+// not at all
+// When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+//
+//     Your goal in this kata is to determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0.
+//
+//
+// Solution
+//
+// function howMuchILoveYou(nbPetals) {
+//     // your code
+//     const phrases = [
+//         'I love you',
+//         'a little',
+//         'a lot',
+//         'passionately',
+//         'madly',
+//         'not at all'
+//     ]
+//
+// //   let rp = null
+// //   const rt = nbPetals > 0 ? (nbPetals < 6 ? phrases[(nbPetals) -1]: phrases[(nbPetals%6 -1)]) : false
+// //   return console.log(rt)
+//     return
+// }
+//
+// howMuchILoveYou(3)
 
-    I love you
-a little
-a lot
-passionately
-madly
-not at all
-When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
 
-    Your goal in this kata is to determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0.
+// 07.06.22
+// 7.
+// Instructions
+// Write a function that returns a string in which firstname is swapped with last name.
+//
+// Example(Input --> Output)
+//
+// "john McClane" --> "McClane john"
+//
+// function nameShuffler(str){
+//     //Shuffle It
+// }
+// Solution
+// function nameShuffler(str){
+//     //Shuffle It
+//     const str1 = str;
+//     const str2 = str1.split(' ').reverse().join(' ');
+//     return str2
+// }
+// nameShuffler('john McClane')
+// 8.
+// Reversed Strings
+// Instructions
+// Complete the solution so that it reverses the string passed into it.
+//
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
+//
+// function solution(str) {
+//     return str1 = str.split('').reverse().join('')
+// }
+// solution('drow')
 
 
-Solution
-
-function howMuchILoveYou(nbPetals) {
-    // your code
-    const phrases = [
-        'I love you',
-        'a little',
-        'a lot',
-        'passionately',
-        'madly',
-        'not at all'
-    ]
-
-//   let rp = null
-//   const rt = nbPetals > 0 ? (nbPetals < 6 ? phrases[(nbPetals) -1]: phrases[(nbPetals%6 -1)]) : false
-//   return console.log(rt)
-    return
-}
-
-howMuchILoveYou(3)
 
