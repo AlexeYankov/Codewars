@@ -292,31 +292,101 @@
 // XO('xXXoOo')
 
 
-15. Count of positives / sum of negatives
-Instructions
-Given an array of integers.
+// 15. Count of positives / sum of negatives
+// Instructions
+// Given an array of integers.
+//
+//     Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+//
+//     If the input is an empty array or is null, return an empty array.
+//
+//     Example
+// For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+//
+// Solition
+//
+// function countPositivesSumNegatives(input) {
+//     let a = []
+//     let b = 0
+//     for (let elem of input) {
+//         if (typeof elem == 'object') {
+//             elem > 0 ? a.push(elem) : b += elem
+//         } else {
+//             elem > 0 ? a.push(elem) : b += elem
+//         }}
+//     const a1 = a.length
+//     return [a1, b];
+// }
+// let testData = [0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14];
+// countPositivesSumNegatives(testData);
 
-    Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+// 16.06
+// 16. Enumerable Magic #20 - Cascading Subsets
+// Instructions
+// Create a method each_cons that accepts a list and a number n, and returns cascading subsets of the list of size n, like so:
+//
+//     each_cons([1,2,3,4], 2)
+// #=> [[1,2], [2,3], [3,4]]
+//
+// each_cons([1,2,3,4], 3)
+// #=> [[1,2,3],[2,3,4]]
+//
+// As you can see, the lists are cascading; ie, they overlap, but never out of order.
+//
+//     function eachCons(array, n) {
+//     return [];
+// }
+//
+// Solition
+// function removeChar(str){
+//     //You got this!
+//     const arr1 = [], str1 = str.split(''), str2 = str1.pop(), str3 = str1.shift()
+//     return str1.join('')
+// };
+//
+// removeChar('eloquent')
 
-    If the input is an empty array or is null, return an empty array.
+// 17. Convert a Number to a String!
+// We need a function that can transform a number into a string.
+//
+//     What ways of achieving this do you know?
+//
+//     Examples:
+//     123 --> "123"
+// 999 --> "999"
+// Solution
+// function numberToString(num) {
+//     // Return a string of the number here!
+//     return num.toString()
+// }
+// numberToString(67)
 
-    Example
-For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+// 18. Remove String Spaces
+// Simple, remove the spaces from the string, then return the resultant string.
+//
+//     SOLUTION
+//     function noSpace(x){
+//     return x.split(' ').join('')
+//
+// }
+// noSpace('8 j 8   mBliB8g  imjB8B8  jl  B')
 
-Solition
-
-function countPositivesSumNegatives(input) {
-    let a = []
-    let b = 0
-    for (let elem of input) {
-        if (typeof elem == 'object') {
-            elem > 0 ? a.push(elem) : b += elem
-        } else {
-            elem > 0 ? a.push(elem) : b += elem
-        }}
-    const a1 = a.length
-    return [a1, b];
-}
-let testData = [0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14];
-countPositivesSumNegatives(testData);
+// 19. Find the smallest integer in the array
+// Given an array of integers your solution should find the smallest integer.
+//
+//     For example:
+//
+//     Given [34, 15, 88, 2] your solution will return 2
+// Given [34, -345, -1, 100] your solution will return -345
+// You can assume, for the purpose of this kata, that the supplied array will not be empty.
+//
+//     SOLUTION
+// class SmallestIntegerFinder {
+//     findSmallestInt(args) {
+//         let arr1 = args.sort(function(a, b) {
+//             return a-b;
+//         })
+//         return arr1.shift()
+//     }
+// }
 
