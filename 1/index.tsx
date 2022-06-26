@@ -390,3 +390,82 @@
 //     }
 // }
 
+// 20. Grasshopper - Summation
+// Summation
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+//
+// For example:
+//
+//     summation(2) -> 3
+// 1 + 2
+//
+// summation(8) -> 36
+// 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+//
+// Solution
+// var summation = function (num) {
+//     // Code here
+//     const a1 = [];
+//     for (i = 0; i<=num; i++) {
+//         a1.push(i)
+//     }
+//     let result = a1.reduce(function(sum, elem){
+//         return sum+elem;
+//     },0);
+//     return result
+// }
+// summation(4)
+
+// 21.
+// Century From Year
+// Introduction
+// The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
+//
+//     Task
+// Given a year, return the century it is in.
+//
+// Examples
+// 1705 --> 18
+// 1900 --> 19
+// 1601 --> 17
+// 2000 --> 20
+//
+// function century(year) {
+//     // Finish this :)
+//     return Math.ceil(year/100);
+// }
+// century(1705)
+
+// 22. Sum Arrays
+// Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+//
+// Examples
+// Input: [1, 5.2, 4, 0, -1]
+// Output: 9.2
+//
+// Input: []
+// Output: 0
+//
+// Input: [-2.398]
+// Output: -2.398
+//
+// Assumptions
+// You can assume that you are only given numbers.
+//     You cannot assume the size of the array.
+//     You can assume that you do get an array and if the array is empty, return 0.
+//
+// function sum (numbers) {
+//     "use strict";
+//     let a1 = 0, a2 = 0
+//     for (let elem of numbers) {
+//         if (elem>1) {
+//             a1 +=elem
+//         } if (elem<0) {
+//             a2 +=elem
+//         }
+//     }
+//     return a1 !== 0 ? a1 : a2 !== 0 ? a2 : 0
+// };
+//
+// sum([1, 5.2, 4, 0, -1])
+
