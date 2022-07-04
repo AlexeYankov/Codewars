@@ -92,9 +92,9 @@
 //         'not at all'
 //     ]
 //
-// //   let rp = null
-// //   const rt = nbPetals > 0 ? (nbPetals < 6 ? phrases[(nbPetals) -1]: phrases[(nbPetals%6 -1)]) : false
-// //   return console.log(rt)
+//     let rp = null
+//     const rt = nbPetals > 0 ? (nbPetals < 6 ? phrases[(nbPetals) -1]: phrases[(nbPetals%6 -1)]) : false
+//   return console.log(rt)
 //     return
 // }
 //
@@ -468,4 +468,123 @@
 // };
 //
 // sum([1, 5.2, 4, 0, -1])
+
+
+
+// function convertToRoman(num) {
+//     const a1 = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000], a7 = [], a6 = [], a5 = [], a8 =[]
+//     const a2 = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M']
+//     const a4 = num.toString().split('')
+//     if (a4.length>=3) {
+//         a5.push(a4.pop(a4.length))
+//         a6.push(a4.pop(a4.length-1))
+//         a7.push(a4.pop(a4.length-2))
+//     }
+//     a8.push(a2[12].repeat(+a4.join('')))
+//     let z = [], z1 = [], z3 = []
+//     const a10 = a1.reverse(), a11 = a2.reverse()
+//     for (let i = 0; i<a1.length; i++) {
+//         if (a5*10>=a10[i-1]) {
+//             z.push(a11[i-1])
+//         } if (a6>=a10[i-1]) {
+//             z1.push(a11[i-1])
+//         }}
+//     console.log(z)
+//     console.log(z1)
+//     return console.log(z1)
+// }
+//
+//
+// convertToRoman(5777)
+
+// 03.07.22
+// 23. Volume of a Cuboid
+// Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. Write a function to help Bob with this calculation.
+//     class Kata {
+// static getVolumeOfCuboid(length, width, height) {
+//         // your code here
+//     }
+// }
+//
+// SOLUTION
+// class Kata {
+//     static getVolumeOfCuboid(length, width, height) {
+//         // your code here
+//         return length * width * height
+//     }
+// }
+
+// 24. Function 1 - hello world
+// Description:
+//     Make a simple function called greet that returns the most-famous "hello world!".
+//
+//     Style Points
+// Sure, this is about as easy as it gets. But how clever can you be to create the most creative hello world you can think of? What is a "hello world" solution you would want to show your friends?
+//     SOLUTION
+//     // Write a function "greet" that returns "hello world!"
+//
+//     function greet() {
+//         return "hello world!"
+//     }
+
+// 25. L1: Set Alarm
+// Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+//
+//     The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+//
+// setAlarm(true, true) -> false
+// setAlarm(false, true) -> false
+// setAlarm(false, false) -> false
+// setAlarm(true, false) -> true
+//
+// function setAlarm(employed, vacation){
+//
+// }
+// SOLUTION
+//
+// function setAlarm(e, v){
+//     return e == true ? v == true ? false : e : false
+// }
+
+// 26. Beginner Series #1 School Paperwork
+// Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+//
+//     Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+//
+// Example:
+//     n= 5, m=5: 25
+// n=-5, m=5:  0
+//
+// solution
+// function paperwork(n, m) {
+//     if (n>0 && m>0) {
+//         return n * m
+//     } else {
+//         return 0
+//     }}
+
+// 27. Remove the minimum
+// The museum of incredible dull things
+// The museum of incredible dull things wants to get rid of some exhibitions. Miriam, the interior architect, comes up with a plan to remove the most boring exhibitions. She gives them a rating, and then removes the one with the lowest rating.
+//
+//     However, just as she finished rating all exhibitions, she's off to an important fair, so she asks you to write a program that tells her the ratings of the items after one removed the lowest one. Fair enough.
+//
+// Task
+// Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
+//
+//     Don't change the order of the elements that are left.
+//
+// Examples
+// * Input: [1,2,3,4,5], output= [2,3,4,5]
+//     * Input: [5,3,2,1,4], output = [5,3,2,4]
+//     * Input: [2,2,1,2,1], output = [2,2,2,1]
+//
+// Solution
+// function removeSmallest(n) {
+//     const n1 = Array.from(n), n2 = n1.splice(n1.indexOf(Math.min.apply(null, n1)),1);
+//     return n1
+// }
+
+
+
 
