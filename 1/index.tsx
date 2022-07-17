@@ -585,6 +585,55 @@
 //     return n1
 // }
 
+// 17.07
+// 28. Counting sheep...
+// Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+//
+// For example,
+//
+//     [true,  true,  true,  false,
+//         true,  true,  true,  true ,
+//         true,  false, true,  false,
+//         true,  false, false, true ,
+//         true,  true,  true,  true ,
+//         false, false, true,  true]
+// The correct answer would be 17.
+//
+// Solution
+// function countSheeps(arrayOfSheep) {
+//     const arrayOfSheep1 = arrayOfSheep ? arrayOfSheep : false
+//     const a1 = arrayOfSheep1.filter(el=> el !== true)
+//     return arrayOfSheep1.length - a1.length
+// }
+// var array1 = [true,  true,  true,  false,
+//     true,  true,  true,  true ,
+//     true,  false, true,  false,
+//     true,  false, false, true ,
+//     true,  true,  true,  true ,
+//     false, false, true,  true ];
+// countSheeps(array1)
+
+// 29. Count the divisors of a number
+// Count the number of divisors of a positive integer n.
+//
+//     Random tests go up to n = 500000.
+//
+// Examples (input --> output)
+// 4 --> 3 (1, 2, 4)
+// 5 --> 2 (1, 5)
+// 12 --> 6 (1, 2, 3, 4, 6, 12)
+// 30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30)
+
+// Solution
+// function getDivisorsCnt(n){
+//     let a = 1, b = []
+//     for (el=a; el<=n;el++) {
+//         (n/el)%1 == 0 ? b.push(el) : ""
+//     }
+//     return b.length
+// }
+// getDivisorsCnt(1)
+
 
 
 
