@@ -635,5 +635,120 @@
 // getDivisorsCnt(1)
 
 
+// 26.07
+// 30. Reverse words
+// Instructions
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+//
+//     Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+//
+// SOLUTION
+//
+// function reverseWords(str) {
+//     const a = str.split(' '), b=[]
+//     for (let i = 0; i<a.length; i++) {
+//         b.push(a[i].split('').reverse().join(''))
+//     }
+//     return b.join(' ')
+// }
+//
+// reverseWords('This is an example!')
+
+// 31. Area of an arrow
+// Area of an arrow
+// An arrow is formed in a rectangle with sides a and b by joining the bottom corners to the midpoint of the top edge and the centre of the rectangle.
+//     a and b are integers and > 0
+//
+// Write a function which returns the area of the arrow.
+//
+//     SOLUTION
+// function arrowArea(a,b) {
+//     // your code
+//     return 0.25*a*b
+// }
+
+// 32. Beginner Series #3 Sum of Numbers
+// Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+//
+//     Note: a and b are not ordered!
+//
+// Examples (a, b) --> output (explanation)
+//
+// SOLUTION
+// function getSum( a,b ) {
+//     let c = 0
+//     if (a === b) {
+//         c = a
+//     } else {
+//         let f = []
+//         let max = a < b ? b : a
+//         let min = a > b ? b : a
+//         for (let i = min; i<=max; i++) {
+//             f.push(i)
+//         }
+//         for (i=0; i<f.length;i++) {
+//             c += f[i]
+//         }
+//     }
+//     return c
+// }
+
+// 33. Small enough? - Beginner
+// INSTRUCTIONS
+// You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
+//
+//     You can assume all values in the array are numbers.
+//
+// SOLUTION
+//
+// function smallEnough(a, limit) {
+//     let b = a, c = 0, f = 0
+//     b.forEach(el=> el > c ? c = el : c)
+//     return c <= limit ? true : false
+// }
+
+// 34. Mumbling
+// INSTRUCTIONS
+// This time no story, no theory. The examples below show you how to write function accum:
+//
+//     Examples:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+// The parameter of accum is a string which includes only letters from a..z and A..Z.
+//
+//     SOLUTION
+// function accum(s) {
+//     // your code
+//     const contaiter = s, pattern = contaiter.toLowerCase().split('')
+//     let switchContainer = [], finalSwitchContainer = []
+//     for (let i = 0; i<pattern.length; i++) {
+//         if (i===0) {
+//             switchContainer.push(pattern[i].toUpperCase())
+//         } else {
+//             switchContainer.push(pattern[i].toUpperCase())
+//             switchContainer.push(pattern[i].repeat(i))
+//         }
+//     }
+//     for (let i = 0; i<switchContainer.length; i++) {
+//         if (switchContainer[i] == switchContainer[i].toUpperCase()) {
+//             const h = '-'
+//             finalSwitchContainer.push(h)
+//             finalSwitchContainer.push(switchContainer[i])
+//         } else {finalSwitchContainer.push(switchContainer[i])}
+//     }
+//     const correction = finalSwitchContainer.shift()
+//     return finalSwitchContainer.join('')
+//
+// }
+// accum("Zpgl")
+
+
+
+
+
+
 
 
