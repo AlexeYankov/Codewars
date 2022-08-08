@@ -745,6 +745,85 @@
 // }
 // accum("Zpgl")
 
+// 06.08.22
+//
+// 35. Smallest value of an array
+// INSTRUCTIONS
+// Write a function that can return the smallest value of an array or the index of that value. The function's 2nd parameter will tell whether it should return the value or the index.
+//
+// Assume the first parameter will always be an array filled with at least 1 number and no duplicates. Assume the second parameter will be a string holding one of two values: 'value' and 'index'.
+//
+// min([1,2,3,4,5], 'value') // => 1
+// min([1,2,3,4,5], 'index') // => 0
+//
+// SOLUTION
+
+// function min(arr, toReturn) {
+//     // TODO
+//     let c = 0, e=arr, r=0
+//     if (toReturn === 'value' ) {
+//         c = Math.min(...e)
+//         return c
+//     }
+//     if (toReturn === 'index') {
+//         c = Math.min(...e)
+//         r = e.indexOf(c)
+//         return r
+//     }
+//     return 'this type not exist'
+// }
+// min([1,2,3,4,5], 'value')
+
+// 36. Build Tower
+// INSRUCTIONS
+// Build Tower
+// Build a pyramid-shaped tower given a positive integer number of floors. A tower block is represented with "*" character.
+//
+//     For example, a tower with 3 floors looks like this:
+//
+// [
+//     "  *  ",
+//     " *** ",
+//     "*****"
+// ]
+// And a tower with 6 floors looks like this:
+//
+// [
+//     "     *     ",
+//     "    ***    ",
+//     "   *****   ",
+//     "  *******  ",
+//     " ********* ",
+//     "***********"
+// ]
+//
+// SOLUTION
+//
+// function towerBuilder(nFloors) {
+//     // build here
+//     if (nFloors === 1) {
+//         return ['*']
+//     }
+//     if (nFloors === 2) {
+//         return ['*','***']
+//     }
+//     let a=['*', '***'], b=nFloors, c=[], d='*', f=['*'], l=['*']
+//     for (i=b;i>2;i--) {
+//         if (i%2===0) {
+//             l.push(d.repeat((i-1)*2))
+//             c.push(l.join(''))
+//
+//         }
+//         else {
+//             f.push(d.repeat((i-1)+1))
+//             c.push(f.join(''))
+//
+//         }
+//     }
+//     return a.concat(c)
+// }
+// towerBuilder(2)
+
 
 
 
