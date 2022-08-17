@@ -486,12 +486,12 @@
 //     for (let i = 0; i<a1.length; i++) {
 //         if (a5*10>=a10[i-1]) {
 //             z.push(a11[i-1])
-//         } if (a6>=a10[i-1]) {
-//             z1.push(a11[i-1])
+//         } if (a6>=a10[i]) {
+//             z1.push(a11[i])
 //         }}
 //     console.log(z)
 //     console.log(z1)
-//     return console.log(z1)
+//     return console.log(a8)
 // }
 //
 //
@@ -759,7 +759,7 @@
 // SOLUTION
 
 // function min(arr, toReturn) {
-//     // TODO
+//
 //     let c = 0, e=arr, r=0
 //     if (toReturn === 'value' ) {
 //         c = Math.min(...e)
@@ -825,6 +825,33 @@
 // towerBuilder(2)
 
 
+// 13.08.22
+
+// 37. Sum of two lowest positive integers
+//
+// Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+//
+//     For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+//
+//     [10, 343445353, 3453445, 3453545353453] should return 3453455.
+//
+// SOLUTION
+// function sumTwoSmallestNumbers(numbers) {
+//     //Code here
+//     let a = numbers.sort(function(a, b){
+//         return a-b
+//     })
+//     return a[0] + a[1]
+// }
+// sumTwoSmallestNumbers([15, 28, 4, 2, 43])
+
+// 38. Break camelCase
+// Complete the solution so that the function will break up camel casing, using a space between words.
+//
+//     Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
 
 
 
