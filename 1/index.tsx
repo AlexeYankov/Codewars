@@ -853,9 +853,59 @@
 // "identifier"   =>  "identifier"
 // ""             =>  ""
 
+// 05.11.22
+// 39 Trolls are attacking your comment section!
+//
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+//
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+//
+//     For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+//
+//     Note: for this kata y isn't considered a vowel.
+//
+// function disemvowel(str) {
+//     return str;
+// }
+//
+// function disemvowel(str) {
+//     const copyStr = [...str.toLowerCase().split('')]
+//     let res = [], res1 = [], res2 = []
+//     const filter = ['a', 'e', 'i', 'o', 'u'];
+//     for (let i = 0; i < copyStr.length; i++) {
+//         for (let u = 0; u<filter.length; u++) {
+//             filter[u] == copyStr[i] ? res.push(i) : 0
+//         }
+//     }
+//     const finalArray = str.split('')
+//     for (let i = 0; i < finalArray.length; i++) {
+//         res.includes(finalArray.indexOf(finalArray[i])) ? 0 : res1.push(finalArray[i])
+//
+//     }
+//     return res1.join('');
+// }
+// disemvowel("This website is for losers LOL!")
 
-dsdsfwef
 
+// 40. Squares sequence
+// Complete the function that returns an array of length n, starting with the given number x and the squares of the previous number. If n is negative or zero, return an empty array/list.
+//
+//     Examples
+// 2, 5  -->  [2, 4, 16, 256, 65536]
+// 3, 3  -->  [3, 9, 81]
+//
+// function squares(x, n) {
+//     let array = [], error = []
+//     for (let i = 1; i<=n; i++) {
+//         if (i<=1) {
+//             array.push(x*(i))
+//         }
+//         else {
+//             array.push(Math.pow(+array[i-2], 2))
+//         }
+//     }
+//     return n ? array : error
+// }
 
 
 
