@@ -470,7 +470,6 @@
 // sum([1, 5.2, 4, 0, -1])
 
 
-
 // function convertToRoman(num) {
 //     const a1 = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000], a7 = [], a6 = [], a5 = [], a8 =[]
 //     const a2 = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M']
@@ -906,6 +905,111 @@
 //     }
 //     return n ? array : error
 // }
+
+// 19.11.22
+// 41. If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+//
+// Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in. Additionally, if the number is negative, return 0 (for languages that do have them).
+//
+// Note: If the number is a multiple of both 3 and 5, only count it once.
+//
+//     Courtesy of projecteuler.net (Problem 1)
+//
+// function solution(number){
+//     if (number <= 0) {
+//         return 0
+//     }
+//     let a = [], b = 0
+//     for (i = 0; i<number; i++) {
+//         if (i % 3 == 0) {
+//             a.push(i)
+//         }
+//         if (i % 10 == 0) {
+//             ''
+//         }
+//         if (i % 5 == 0) {
+//             a[a.length-1] == i ? '' : a.push(i)
+//         }
+//     }
+//     return a.reduce(function(sum, current) {
+//         return sum + current
+//     })
+// }
+// solution(10)
+//
+
+//  42. Isograms
+//
+// An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+//
+// Example: (Input --> Output)
+//
+// "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+
+// function isIsogram(str){
+//     //...
+//     const copyOfData = str, splitCopy = str.toLowerCase().split(''), arrayOfData = [""]
+//     for (let i = 0; i<splitCopy.length; i++) {
+//         if (arrayOfData.includes(splitCopy[i])) {
+//             return false
+//         }
+//         else {
+//             arrayOfData.push(splitCopy[i])
+//         }
+//     }
+//     return true
+// }
+// isIsogram("Dermatoglyphics")
+
+// 43. Stop gninnipS My sdroW!
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+//
+//     Examples:
+//
+// spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw"
+// spinWords( "This is a test") => returns "This is a test"
+// spinWords( "This is another test" )=> returns "This is rehtona test"
+//
+// function spinWords(string){
+// const copyOfDataArray = string.split(' '), temp = []
+// for (let i = 0; i < copyOfDataArray.length; i++) {
+//     copyOfDataArray[i].split('').length >= 5 ? (
+//         temp.push(copyOfDataArray[i].split('').reverse().join(''))
+//     ) : temp.push(copyOfDataArray[i])
+// }
+// return temp.join(' ')
+// }
+// spinWords("Hey fellow warriors")
+
+// 44. Count of positives / sum of negatives
+// Given an array of integers.
+//
+//     Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+//
+//     If the input is an empty array or is null, return an empty array.
+//
+//     Example
+// For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+//
+// function countPositivesSumNegatives(input) {
+//     let a = [], copyOfData = input || [], tempNumber = 0
+//     if (copyOfData.length < 0 ) {
+//         return []
+//     }
+//     for (let i = 0; i<copyOfData.length; i++) {
+//         if (copyOfData[i]>0) {
+//             tempNumber = tempNumber + 1
+//         }
+//         else {
+//             a.push(copyOfData[i])
+//         }
+//     }
+//     return  tempNumber == a.reduce((acc, el)=> acc+el, 0) ? [] : [tempNumber, a.reduce((acc, el)=> acc+el, 0)]
+// }
+// let testData = [0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15];
+// countPositivesSumNegatives(testData);
+
+
 
 
 
