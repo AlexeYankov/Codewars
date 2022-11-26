@@ -488,12 +488,10 @@
 //         } if (a6>=a10[i]) {
 //             z1.push(a11[i])
 //         }}
-//     console.log(z)
-//     console.log(z1)
 //     return console.log(a8)
 // }
-//
-//
+
+
 // convertToRoman(5777)
 
 // 03.07.22
@@ -1009,6 +1007,90 @@
 // let testData = [0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15];
 // countPositivesSumNegatives(testData);
 
+// 45. Convert to Roman
+//
+// let a = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+// let b = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+//
+// function convertToRoman (num) {
+//     let u = num, p = 0, finalArray = [], finalRomanArray = []
+//     for (let i = 0; i< a.length; i++) {
+//         if (u == a[i]) {
+//             finalArray.push(a[i])
+//             u = u - a[i]
+//         }
+//         if (u - a[i] >= 1) {
+//             p = Math.floor(u / a[i]);
+//             u = u - p * a[i];
+//             for (let e = p; e>=1; --e) {
+//                 finalArray.push(a[i])
+//             };
+//             if (u == a[i+1]){
+//                 finalArray.push(a[i+1])
+//                 u = u - a[i+1]
+//             }
+//             else {
+//                 p = Math.floor(u / a[i+1]);
+//                 u = u - p * a[i+1];
+//                 for (let e = p; e>=1; --e) {
+//                     finalArray.push(a[i+1])
+//                 };
+//
+//             }
+//             i++
+//         }
+//         else {""}
+//     }
+//     for (let i = 0; i<finalArray.length; i++) {
+//         finalRomanArray.push(b[a.indexOf(finalArray[i])])
+//     }
+//
+//     return finalRomanArray.join('')
+// }
+
+// 26.11.22
+// 46 Millipede of words
+// The set of words is given. Words are joined if the last letter of one word and the first letter of another word are the same. Return true if all words of the set can be combined into one word. Each word can and must be used only once. Otherwise return false.
+//
+//     Input
+// Array of 3 to 7 words of random length. No capital letters.
+//
+//     Example true
+// Set: excavate, endure, desire, screen, theater, excess, night.
+//     Millipede: desirE EndurE ExcavatE ExcesS ScreeN NighT Theater.
+//
+//     Example false
+// Set: trade, pole, view, grave, ladder, mushroom, president.
+//     Millipede: presidenT Trade.
+//     Примеры
+// assert.strictEqual(solution(["trade", "pole", "view", "grave", "ladder", "mushroom", "president"]), false)
+// })
+// it("Five words", function() {
+//     assert.strictEqual(solution(["screen", "desire", "theater", "excess", "night"]), true) откуда тут Desire?
+// })
+// it("Four words", function() {
+//     assert.strictEqual(solution(["engine", "endure", "elite", "excess"]), true)
+// })
+// it("One letter words", function() {
+//     assert.strictEqual(solution(["east", "e", "e", "t", "t", "e", "time"]), true)
+// })
+// it("One more test", function() {
+//     assert.strictEqual(solution(["no", "dog", "on", "good"]), false)
+//
+//
+//     function solution(words) {
+//         let tempArray = [...words], testArray = [], temp=[], u=0, arrayOfData = []
+//         let arrayOfUnique = tempArray.reduce(function(acc,el) {
+//             acc.includes(el) ? "" : acc.push(el)
+//             return acc
+//         }, []);
+//         return arrayOfUnique
+//         for (let i = 0; i<arrayOfUnique.length; i++) {
+//             temp = arrayOfUnique[i].split('')
+//             testArray.push
+//         }
+//     }
+//     solution(["screen", "desire", "desire", "desire", "theater", "excess", "night"])
 
 
 
