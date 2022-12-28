@@ -1078,22 +1078,132 @@
 //     assert.strictEqual(solution(["no", "dog", "on", "good"]), false)
 //
 //
-//     function solution(words) {
-//         let tempArray = [...words], testArray = [], temp=[], u=0, arrayOfData = []
-//         let arrayOfUnique = tempArray.reduce(function(acc,el) {
-//             acc.includes(el) ? "" : acc.push(el)
-//             return acc
-//         }, []);
-//         return arrayOfUnique
-//         for (let i = 0; i<arrayOfUnique.length; i++) {
-//             temp = arrayOfUnique[i].split('')
-//             testArray.push
-//         }
+// function solution(words) {
+//     let tempArray = [...words], testArray = [], temp=[], u=0, arrayOfData = []
+//     let arrayOfUnique = tempArray.reduce(function(acc,el) {
+//         acc.includes(el) ? "" : acc.push(el)
+//         return acc
+//     }, []);
+//     let f=[], o = [], c = '';
+//     for (let i = 0; i< arrayOfUnique.length; i++) {
+//         let s = arrayOfUnique[i].split('');
+//         c = s[0] + s[s.length-1]
+//         f.push(c)
 //     }
-//     solution(["screen", "desire", "desire", "desire", "theater", "excess", "night"])
+//     f
+//     return f.sort()
+// }
+// solution(["screen", "desire", "desire", "desire", "theater", "excess", "night"])
+
+// 11.12.22
+
+// 47. Sum of Digits / Digital Root
+
+// Digital root is the recursive sum of all the digits in a number.
+
+// Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+
+// Examples
+//     16  -->  1 + 6 = 7
+//    942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+// 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
+// 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
+
+// function digitalRoot(n) {
+//     let copyOfn = new String(n)
+//     let c = copyOfn.toString().split('')
+//      while (c.length>1) {
+//          copyOfn = c.reduce((acc, el)=> acc + (el == 0 ? 0 : +el), 0)
+//          c = copyOfn.toString().split('')
+//      }
+//       return +c[0]
+//   }
+  
+//   digitalRoot(987)
+
+// 48 Vowel Count
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+// The input string will only consist of lower case letters and/or spaces.
+
+// function getCount(str) {
+//     const dictionary = ['a', 'e', 'i', 'o', 'u']
+//     let a = 0
+//     let c = str.split('')
+//     for (let i = 0; i<c.length; i++) {
+//       dictionary.includes(c[i]) ? a++ : ''
+//     }
+//     return a;
+//   }
+//
+//   getCount("abracadabra")
+
+// 24.12.22
+// 49  Who likes it?
+// You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+// Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+
+// function likes(names) {
+//     // TODO
+//   switch (names.length) {
+//       case 0: 
+//         return "no one likes this";
+//       case 1: 
+//         return names[0] + ' likes this';
+//       case 2: 
+//         return names[0] + ' and ' + names[1] + ' like this';
+//       case 3: 
+//         return names[0] + ', ' + names[1] + ' and ' + names[2] + ' like this';
+//       default: 
+//         return names[0] + ', ' + names[1] + ' and ' + `${names.length-2}` + ' others like this';
+//     }
+//   }
+
+//   50. Create Phone Number
+
+//   Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+// Example
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+
+// function createPhoneNumber(numbers){
+//     let prefix = numbers.slice(0,3).join('')
+//     let startOfNumber = numbers.slice(3,6).join('')
+//     let restOfNumbers = numbers.slice(6,numbers.length).join('')
+//     return '('+ prefix + ')' + ' ' + startOfNumber + '-' + restOfNumbers
+//   }
+
+// 27.12.22
+
+// 51  Array.diff
+
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+// It should remove all values from list a, which are present in list b keeping their order.
+
+// arrayDiff([1,2],[1]) == [2]
+// If a value is present in b, all of its occurrences must be removed from the other:
+
+// arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
 
 
+// function arrayDiff(a, b) {
+//     let z = []
+//     let f = a.reduce((start,current) => {
+//       return b.includes(current) ? "" : z.push(current)
+//   },"")
+//     return z
+//   }
 
 
 
