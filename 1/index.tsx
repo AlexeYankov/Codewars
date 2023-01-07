@@ -1137,7 +1137,7 @@
 //     }
 //     return a;
 //   }
-//
+
 //   getCount("abracadabra")
 
 // 24.12.22
@@ -1204,6 +1204,28 @@
 //   },"")
 //     return z
 //   }
+
+// 52 Ordered Count of Characters
+
+// orderedCount("abracadabra") == [['a', 5], ['b', 2], ['r', 2], ['c', 1], ['d', 1]]
+
+// function solution(words) {
+//     let tempArray = words, testArray = [], temp=[], u=0, arrayOfData = []
+//     let arrayOfUnique = tempArray.split('').reduce(function(acc,el) {
+//         acc.includes(el) ? "" : acc.push(el)
+//         return acc
+//     }, []);
+//     let arrayOfData1 = arrayOfUnique.reduce(function(acc,el) {
+//         let count = words.split('').reduce(function(acc1,el1) {
+//             el == el1 ? acc1++ : ""
+//             return acc1
+//         },0)
+//         acc.push([el, count])
+//         return acc
+//     }, []);
+//     return arrayOfData1
+// }
+// solution("abracadabra")
 
 
 
