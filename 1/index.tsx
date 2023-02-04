@@ -100,7 +100,6 @@
 //
 // howMuchILoveYou(3)
 
-
 // 07.06.22
 // 7.
 // Instructions
@@ -291,7 +290,6 @@
 // }
 // XO('xXXoOo')
 
-
 // 15. Count of positives / sum of negatives
 // Instructions
 // Given an array of integers.
@@ -469,7 +467,6 @@
 //
 // sum([1, 5.2, 4, 0, -1])
 
-
 // function convertToRoman(num) {
 //     const a1 = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000], a7 = [], a6 = [], a5 = [], a8 =[]
 //     const a2 = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M']
@@ -490,7 +487,6 @@
 //         }}
 //     return console.log(a8)
 // }
-
 
 // convertToRoman(5777)
 
@@ -630,7 +626,6 @@
 //     return b.length
 // }
 // getDivisorsCnt(1)
-
 
 // 26.07
 // 30. Reverse words
@@ -821,7 +816,6 @@
 // }
 // towerBuilder(2)
 
-
 // 13.08.22
 
 // 37. Sum of two lowest positive integers
@@ -882,7 +876,6 @@
 //     return res1.join('');
 // }
 // disemvowel("This website is for losers LOL!")
-
 
 // 40. Squares sequence
 // Complete the function that returns an array of length n, starting with the given number x and the squares of the previous number. If n is negative or zero, return an empty array/list.
@@ -1118,7 +1111,7 @@
 //      }
 //       return +c[0]
 //   }
-  
+
 //   digitalRoot(987)
 
 // 48 Vowel Count
@@ -1155,15 +1148,15 @@
 // function likes(names) {
 //     // TODO
 //   switch (names.length) {
-//       case 0: 
+//       case 0:
 //         return "no one likes this";
-//       case 1: 
+//       case 1:
 //         return names[0] + ' likes this';
-//       case 2: 
+//       case 2:
 //         return names[0] + ' and ' + names[1] + ' like this';
-//       case 3: 
+//       case 3:
 //         return names[0] + ', ' + names[1] + ' and ' + names[2] + ' like this';
-//       default: 
+//       default:
 //         return names[0] + ', ' + names[1] + ' and ' + `${names.length-2}` + ' others like this';
 //     }
 //   }
@@ -1195,8 +1188,6 @@
 
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
-
-
 // function arrayDiff(a, b) {
 //     let z = []
 //     let f = a.reduce((start,current) => {
@@ -1211,10 +1202,10 @@
 
 // function solution(words) {
 //     let tempArray = words, testArray = [], temp=[], u=0, arrayOfData = []
-//     let arrayOfUnique = tempArray.split('').reduce(function(acc,el) {
-//         acc.includes(el) ? "" : acc.push(el)
-//         return acc
-//     }, []);
+    // let arrayOfUnique = tempArray.split('').reduce(function(acc,el) {
+    //     acc.includes(el) ? "" : acc.push(el)
+    //     return acc
+    // }, []);
 //     let arrayOfData1 = arrayOfUnique.reduce(function(acc,el) {
 //         let count = words.split('').reduce(function(acc1,el1) {
 //             el == el1 ? acc1++ : ""
@@ -1251,3 +1242,72 @@
 //         return acc;
 //     }, [])[0]
 //   }
+
+
+// 03.02.23 
+// 54. Bit Counting
+
+// Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+
+// Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+
+// var countBits = function (n) {
+//   if (typeof n == typeof 1) {
+//     if (n == 0) {
+//       return 0;
+//     } else {
+//       let u = n,
+//         result = [];
+//       for (let i = 2; i < u; u / 2) {
+//         console.log(u);
+//         u % 2 == 0 ? result.push("0") : result.push("1");
+//         u = u / 2;
+//         u > Math.floor(u) ? (u = u - 0.5) : u;
+//       }
+//       result.push("10");
+//       let compare = /1/gi;
+//       let numbers = result.reverse().join("");
+//       return numbers.match(compare).length;
+//     }
+//   }
+//   return 0;
+// };
+
+// countBits(1234)
+
+// 55. Find the odd int
+
+// Given an array of integers, find the one that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+// Examples
+// [7] should return 7, because it occurs 1 time (which is odd).
+// [0] should return 0, because it occurs 1 time (which is odd).
+// [1,1,2] should return 2, because it occurs 1 time (which is odd).
+// [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+// [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+
+// function findOdd(A) {
+//     //happy coding!
+//     let caseValues = A; finalValue = 0
+//     let arrayOfUnique = caseValues.reduce(function(acc,el) {
+//           acc.includes(el) ? "" : acc.push(el)
+//           return acc
+//       }, []);
+//     for (let i = 0; i<arrayOfUnique.length; i++) {
+//       let tempValue = 0;
+//       for (let u = 0; u<caseValues.length; u++) {
+//           arrayOfUnique[i] == caseValues[u] ? tempValue++ : ""
+//       }
+//       if (tempValue%2 == 0) {
+//           ""
+//       }
+//       else { 
+//           finalValue = arrayOfUnique[i] 
+//       }
+//     }
+//     return finalValue;
+//   }
+
+//   findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1])
