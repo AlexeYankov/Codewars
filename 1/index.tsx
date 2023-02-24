@@ -1202,10 +1202,10 @@
 
 // function solution(words) {
 //     let tempArray = words, testArray = [], temp=[], u=0, arrayOfData = []
-    // let arrayOfUnique = tempArray.split('').reduce(function(acc,el) {
-    //     acc.includes(el) ? "" : acc.push(el)
-    //     return acc
-    // }, []);
+// let arrayOfUnique = tempArray.split('').reduce(function(acc,el) {
+//     acc.includes(el) ? "" : acc.push(el)
+//     return acc
+// }, []);
 //     let arrayOfData1 = arrayOfUnique.reduce(function(acc,el) {
 //         let count = words.split('').reduce(function(acc1,el1) {
 //             el == el1 ? acc1++ : ""
@@ -1243,8 +1243,7 @@
 //     }, [])[0]
 //   }
 
-
-// 03.02.23 
+// 03.02.23
 // 54. Bit Counting
 
 // Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
@@ -1303,11 +1302,145 @@
 //       if (tempValue%2 == 0) {
 //           ""
 //       }
-//       else { 
-//           finalValue = arrayOfUnique[i] 
+//       else {
+//           finalValue = arrayOfUnique[i]
 //       }
 //     }
 //     return finalValue;
 //   }
 
 //   findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1])
+
+// 17.02.23
+
+// 56. Replace With Alphabet Position
+
+// Welcome.
+
+// In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+// If anything in the text isn't a letter, ignore it and don't return it.
+
+// "a" = 1, "b" = 2, etc.
+
+// Example
+// alphabetPosition("The sunset sets at twelve o' clock.")
+// Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" ( as a string )
+
+// function alphabetPosition(text) {
+//   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split("")
+//   let a = text.toLowerCase().split(" "), b = [];
+//   const arrayReturned = a.forEach(el=>{
+//       let variable = el.split("")
+//       for (let i = 0; i<variable.length;i++){
+//         alphabet.indexOf(variable[i])+1 !== 0 ?
+//       b.push(alphabet.indexOf(variable[i])+1) : ""
+//     }
+//   })
+//   return b.join(" ");
+// }
+
+// alphabetPosition("The sunset sets at twelve o' clock.")
+
+// 57. Unique In Order
+
+// Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+
+// For example:
+
+// uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+// uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+// uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+
+// var uniqueInOrder=function(iterable) {
+//     let finalArray = []
+//     if (typeof iterable == typeof 'a') {
+//     let arrayOfData = iterable.split("");
+//     for (let i = 0; i<arrayOfData.length;i++) {
+//       if (arrayOfData.length == 0) {return 0}
+//       if (i == 0) {finalArray.push(arrayOfData[0])}
+//       else {
+//           arrayOfData[i-1] == arrayOfData[i] ? "" : finalArray.push(arrayOfData[i])}
+//       }
+//     }
+//     if (typeof iterable[0] == typeof 4) {
+//     let arrayOfData = iterable.join('').split("");
+//     for (let i = 0; i<arrayOfData.length;i++) {
+//       if (arrayOfData.length == 0) {return 0}
+//       if (i == 0) {finalArray.push(+arrayOfData[0])}
+//       else {
+//           arrayOfData[i-1] == arrayOfData[i] ? "" : finalArray.push(+arrayOfData[i])}
+//       }
+//     }
+//     if (typeof iterable[0] == typeof 'a') {
+//     let arrayOfData = iterable;
+//     for (let i = 0; i<arrayOfData.length;i++) {
+//       if (arrayOfData.length == 0) {return 0}
+//       if (i == 0) {finalArray.push(arrayOfData[0])}
+//       else {
+//           arrayOfData[i-1] == arrayOfData[i] ? "" : finalArray.push(arrayOfData[i])}
+//       }
+//     }
+//       return finalArray
+//   }
+
+//   uniqueInOrder([ 'A', 'B', 'C', 'c', 'A', 'D', 'A', 'B', 'C', 'c', 'A', 'D' ])
+
+// 24.02.22
+
+// 58. Persistent Bugger.
+
+// Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
+// For example (Input --> Output):
+
+// 39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
+// 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
+// 4 --> 0 (because 4 is already a one-digit number)
+
+// function persistence(num) {
+//     let copyOfn = new String(num);
+//     let b = 0;
+//     if (num < 0) {
+//       return 0
+//     }
+//     if (copyOfn.toString().split('').length == 1) {
+//       return 0
+//     }
+//     let c = copyOfn.toString().split('')
+//      while (c.length>1) {
+//          b += 1
+//          copyOfn = c.reduce((acc, el)=> acc * (el == 0 ? 0 : +el), 1)
+//          c = copyOfn.toString().split('')
+//      }
+//       return b
+// }
+
+// persistence(999)
+
+// 59. Your order, please
+
+// "is2 Thi1s T4est 3a"-- > "Thi1s is2 3a T4est";
+// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+// ""  -->  ""
+
+// function order(words) {
+//   if (words) {
+//     let copyofWords = words.split(" ");
+//     let tempArray = [],
+//       finalArray = [];
+//     let regEx = /[0-9]/gi;
+//     for (let val = 0; val < copyofWords.length; val++) {
+//       let splittedWord = copyofWords[val];
+//       let indexOfWord = splittedWord.match(regEx);
+//       tempArray.push(indexOfWord + copyofWords[val]);
+//     }
+//     tempArray.sort();
+//     for (let i = 0; i < tempArray.length; i++) {
+//       finalArray.push(tempArray[i].split("").slice(1).join(""));
+//     }
+//     return finalArray.join(" ");
+//   }
+//   return "";
+// }
+// order("is2 Thi1s T4est 3a");
