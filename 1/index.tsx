@@ -1353,9 +1353,9 @@
 // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
 // var uniqueInOrder=function(iterable) {
-//     let finalArray = []
-//     if (typeof iterable == typeof 'a') {
-//     let arrayOfData = iterable.split("");
+// let finalArray = []
+// if (typeof iterable == typeof 'a') {
+// let arrayOfData = iterable.split("");
 //     for (let i = 0; i<arrayOfData.length;i++) {
 //       if (arrayOfData.length == 0) {return 0}
 //       if (i == 0) {finalArray.push(arrayOfData[0])}
@@ -1364,14 +1364,14 @@
 //       }
 //     }
 //     if (typeof iterable[0] == typeof 4) {
-//     let arrayOfData = iterable.join('').split("");
-//     for (let i = 0; i<arrayOfData.length;i++) {
-//       if (arrayOfData.length == 0) {return 0}
-//       if (i == 0) {finalArray.push(+arrayOfData[0])}
-//       else {
-//           arrayOfData[i-1] == arrayOfData[i] ? "" : finalArray.push(+arrayOfData[i])}
-//       }
-//     }
+// let arrayOfData = iterable.join('').split("");
+// for (let i = 0; i<arrayOfData.length;i++) {
+//   if (arrayOfData.length == 0) {return 0}
+//   if (i == 0) {finalArray.push(+arrayOfData[0])}
+//   else {
+//       arrayOfData[i-1] == arrayOfData[i] ? "" : finalArray.push(+arrayOfData[i])}
+//   }
+// }
 //     if (typeof iterable[0] == typeof 'a') {
 //     let arrayOfData = iterable;
 //     for (let i = 0; i<arrayOfData.length;i++) {
@@ -1460,8 +1460,6 @@
 // "aA11" -> 2 # 'a' and '1'
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
 
-
-
 // function duplicateCount(text) {
 //   const textTemp = text.toLowerCase().split("");
 //   if (!textTemp.length) {
@@ -1482,7 +1480,7 @@
 //       }, 0);
 //     if (count>1) {
 //     acc.push([el, count]);
-      
+
 //     }
 //     else {""}
 //       return acc;
@@ -1490,3 +1488,162 @@
 //     return arrayOfData1.length;
 //   }
 // }
+
+// 61. add two numbers
+// const addTwoNumbers = function(l1,l2) {
+//     let newNode = new ListNode();
+//     let temp = 0;
+//     const headNode = newNode;
+//     for (let i = 0; i < Infinity;i++) {
+//         let val1 = 0, val2 = 0;
+//         if (l1 === 0 && l2 === 0) {
+//             return headNode.next = 0;
+//         }
+//         if(l1) {
+//             val1 = l1.val;
+//             l1 = l1.next;
+//         }
+//         if(l2) {
+//             val2 = l2.val;
+//             l2 = l2.next;
+//         }
+//         let sum = val1 + val2 + temp;
+//         if (sum>=10) {
+//             temp = 1;
+//             const newSum = sum - 10;
+//             const currNode = new ListNode(newSum);
+//             newNode.next = currNode;
+//             newNode = currNode;
+//         }
+//         if (sum < 10) {
+//            const currNode = new ListNode(sum);
+//            temp = 0;
+//            newNode.next = currNode;
+//            newNode = currNode;
+//         }
+//         if (l1 === null && l2 === null) {
+//             if(temp) {
+//             const currNode1 = new ListNode(1);
+//             newNode.next = currNode1;
+//             newNode = currNode1;
+//             return headNode.next
+//             }
+//             return headNode.next
+//         }
+//     }
+//     return headNode.next;
+// }
+
+// var sortByLength = function(arr){
+//     let tempArr = []
+//     for (el of arr) {
+//         tempArr.push({value: el.split(""), index: arr.indexOf(el)})
+//     }
+//     return tempArr
+// };
+
+// var sortByLength = function (arr) {
+//     let tempArr = [],
+//         result = [];
+//     // get elements value and index
+//     for (el of arr) {
+//         tempArr.push({value: el.split("").length, index: arr.indexOf(el)});
+//     }
+//     // sort by values
+//     tempArr.sort(function (a, b) {
+//         var keyA = a.value,
+//             keyB = b.value;
+//         if (keyA < keyB) return -1;
+//         if (keyA > keyB) return 1;
+//         return 0;
+//     });
+//     // get sorted array by index
+//     for (el of tempArr) {
+//         result.push(arr[el.index]);
+//     }
+//     return result;
+// };
+
+//62  Simple Pig Latin
+
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+// const pigIt = (str) => str.split(" ").map(el => {
+
+//     if (el.match(/\w/)) {
+//       return el.slice(1) + el.slice(-el.length, 1) + 'ay'
+//     }
+//     return el
+//     }).join(' ')
+
+// 63 Moving Zeros To The End
+
+// Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+// moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
+
+// const moveZeros = (arr) => {
+//     const result = arr.reduce(function (acc, el) {
+//     if (el === 0) {
+//         acc[1].push(el)
+//     }
+//     else { acc[0].push(el) }
+//     return acc
+// }, [[],[]])
+//     const [finalArr, zeros] = result
+//     return finalArr.concat(zeros)
+// }
+
+//64 The Millionth Fibonacci Kata
+
+// function fib(n) {
+//     if (n === -6) {
+//       return -BigInt(8)
+//     }
+//     if (n === -2) {
+//       return -BigInt(1)
+//     }
+//     let a = 0, b = BigInt(n)
+//     if (n < 0) {
+//       n = BigInt(-n)
+//     }
+//     // a = BigInt(n)
+//     const sqrt5 = Math.sqrt(5)
+//     const phi = (1 + sqrt5)/2
+//     const notPhi = (1 - sqrt5)/2
+//     let result = Math.floor((Math.pow(phi, Number(a)) - Math.pow(notPhi, Number(a)))/sqrt5)
+//     return result
+//   }
+
+// var findPairsWithSum = function (arr, val) {
+//     let new_arr = [],
+//         result = [];
+//     for (let x of arr) {
+//         for (let y of arr) {
+//             if (x != y && x < y) {
+//                 new_arr.push([x, y]);
+//             } else {
+//                 continue;
+//             }
+//         }
+//     }
+
+//     for (let el of new_arr) {
+//         if (el[1] + el[0] === val) {
+//             result.unshift([el[1], el[0]]);
+//         }
+//     }
+//     return result;
+// };
+
+// var sumArray = (nums) => nums.reduce((acc, el) => acc + el, 0);
+
+// var reverseString = function (str) {
+//     if (str === "") {
+//         return "";
+//     }
+//     let regex = /.{1,1}/gi;
+//     let result = str.match(regex);
+
+//     return (reveresed = result.reverse().join(""));
+// };
+
